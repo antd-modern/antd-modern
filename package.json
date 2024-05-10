@@ -1,7 +1,7 @@
 {
-  "name": "antd",
+  "name": "antd-modern",
   "version": "5.17.0",
-  "description": "An enterprise-class UI design language and React components implementation",
+  "description": "An enterprise-class UI design language and React components implementation (for Chrome 86+)",
   "keywords": [
     "ant",
     "component",
@@ -77,7 +77,6 @@
     "lint:style": "tsx scripts/check-cssinjs.tsx",
     "npm-install": "npm install",
     "prepare": "is-ci || husky && dumi setup",
-    "prepublishOnly": "tsx ./scripts/pre-publish.ts",
     "prettier": "prettier -c --write **/* --cache",
     "pub": "echo 'Please use `npm publish` instead.'",
     "postpublish": "tsx scripts/post-publish.ts",
@@ -161,7 +160,7 @@
     "rc-tree": "~5.8.7",
     "rc-tree-select": "~5.20.0",
     "rc-upload": "~4.5.2",
-    "rc-util": "^5.39.3",
+    "rc-util": "npm:rc-util-modern@^5.39.3",
     "scroll-into-view-if-needed": "^3.1.0",
     "throttle-debounce": "^5.0.0"
   },
