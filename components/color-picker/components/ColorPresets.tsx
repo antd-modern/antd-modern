@@ -27,7 +27,7 @@ const genPresetColor = (list: PresetsItem[]) =>
 const isBright = (value: Color, bgColorToken: string) => {
   const { r, g, b, a } = value.toRgb();
   const hsv = new RcColor(value.toRgbString()).onBackground(bgColorToken).toHsv();
-  if (a <= 0.5) {
+  if (a! <= 0.5) {
     // Adapted to dark mode
     return hsv.v > 0.5;
   }

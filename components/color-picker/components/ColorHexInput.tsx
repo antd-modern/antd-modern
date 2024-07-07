@@ -17,11 +17,11 @@ const isHexString = (hex?: string) => hexReg.test(`#${hex}`);
 
 const ColorHexInput: FC<ColorHexInputProps> = ({ prefixCls, value, onChange }) => {
   const colorHexInputPrefixCls = `${prefixCls}-hex-input`;
-  const [hexValue, setHexValue] = useState(value?.toHex());
+  const [hexValue, setHexValue] = useState(value?.toHexString());
 
   // Update step value
   useEffect(() => {
-    const hex = value?.toHex();
+    const hex = value?.toHexString();
     if (isHexString(hex) && value) {
       setHexValue(toHexFormat(hex));
     }
